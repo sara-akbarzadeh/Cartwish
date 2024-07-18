@@ -1,0 +1,80 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 14px; /* Adjusted from 16px to 14px */
+  background-color: #f6f8f8;
+}
+
+.align_center {
+  display: flex;
+  align-items: center;
+}
+
+.navbar {
+  justify-content: space-between;
+  padding: 0 40px;
+  background-color: #fff;
+}
+
+.navbar_heading {
+  margin-right: 20px;
+  font-size: 24px; /* Adjusted from 32px to 24px */
+}
+
+.navbar_form {
+  display: flex;
+  align-items: center;
+  width: 450px;
+  height: 40px;
+  border: 1px solid #cdcdcd;
+  border-radius: 5px;
+  padding: 3px;
+}
+
+.navbar_search {
+  flex: 1;
+  height: 100%;
+  padding: 0 7px;
+  font-size: 16px; /* Adjusted from 20px to 16px */
+  font-weight: 500;
+  border: none;
+  outline: none;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.search_button {
+  height: 100%;
+  padding: 0 10px;
+  font-size: 16px; /* Adjusted from 20px to 16px */
+  font-weight: 500;
+  border: none;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  background-color: #6457f9;
+  color: #fff;
+  cursor: pointer;
+}
+
+.navbar_links {
+  font-size: 16px; /* Adjusted from 20px to 16px */
+}
+
+.navbar_links > a {
+  margin: 10px; /* Adjusted from 15px to 10px */
+}
+
+.card_counts {
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  background-color: #6457f9;
+  color: #fff;
+  font-size: 12px;
+  margin-left: 5px;
+}
