@@ -5,7 +5,7 @@
 }
 
 body {
-  font-size: 14px; /* Adjusted from 16px to 14px */
+  font-size: 14px;
   background-color: #f6f8f8;
 }
 
@@ -22,7 +22,7 @@ body {
 
 .navbar_heading {
   margin-right: 20px;
-  font-size: 24px; /* Adjusted from 32px to 24px */
+  font-size: 24px;
 }
 
 .navbar_form {
@@ -39,7 +39,7 @@ body {
   flex: 1;
   height: 100%;
   padding: 0 7px;
-  font-size: 16px; /* Adjusted from 20px to 16px */
+  font-size: 16px;
   font-weight: 500;
   border: none;
   outline: none;
@@ -50,7 +50,7 @@ body {
 .search_button {
   height: 100%;
   padding: 0 10px;
-  font-size: 16px; /* Adjusted from 20px to 16px */
+  font-size: 16px;
   font-weight: 500;
   border: none;
   border-top-right-radius: 5px;
@@ -61,11 +61,15 @@ body {
 }
 
 .navbar_links {
-  font-size: 16px; /* Adjusted from 20px to 16px */
+  font-size: 16px;
 }
 
 .navbar_links > a {
-  margin: 10px; /* Adjusted from 15px to 10px */
+  margin: 10px;
+}
+
+.navbar_links > a.active {
+  font-weight: 600;
 }
 
 .card_counts {

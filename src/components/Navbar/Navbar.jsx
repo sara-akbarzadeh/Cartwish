@@ -7,6 +7,7 @@ import idButton from "../../assets/id-button.png";
 import order from "../../assets/package.png";
 import lock from "../../assets/locked.png";
 import LinkWithIcon from "./LinkWithIcon";
+import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
   return (
@@ -31,9 +32,9 @@ const Navbar = () => {
         <LinkWithIcon title="SignUp" link="/signup" emoji={memo} />
         <LinkWithIcon title="My Orders" link="/myorders" emoji={order} />
         <LinkWithIcon title="LogOut" link="/logout" emoji={lock} />
-        <a href="/cart" className="align_center">
+        <NavLink to="/cart" className="align_center">
           Cart <p className="align_center card_counts">0</p>
-        </a>
+        </NavLink>
       </div>
     </div>
   );
