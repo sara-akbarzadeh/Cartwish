@@ -3,14 +3,28 @@ import "./ProductsList.css";
 import ProductCard from "./ProductCard";
 import useData from "../../hooks/useData";
 import ProductCardSkeleton from "./ProductCardSkeleton";
+import { useSearchParams } from "react-router-dom";
 
 const ProductsList = () => {
-  const { data, error, isLoading } = useData("/products", {
-    params: {
-      category: "Laptops",
+  const [search, setSearch] = useSearchParams();
+  const category = search.get("category");
+  const page = search.get("page");
+  const { data, error, isLoading } = useData(
+    "/products",
+    {
+      params: {
+        category,
+        page,
+      },
     },
-  });
+    [category, page]
+  );
   const skeletons = [1, 2, 3, 4, 5, 6, 7, 8];
+
+  const handlePageChange = (page) => {
+    const cuurentParams = Object.fromEntries([...search]);
+    setSearch({ ...cuurentParams, page: page });
+  };
 
   return (
     <section className="products_list_section">
@@ -40,6 +54,7 @@ const ProductsList = () => {
               stock={product.stock}
             />
           ))}
+        <button onClick={() => handlePageChange(2)}>Page 2</button>
       </div>
     </section>
   );
