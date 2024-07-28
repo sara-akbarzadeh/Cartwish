@@ -36,8 +36,7 @@ const SignupPage = () => {
   } = useForm({ resolver: zodResolver(schema) });
   const onSubmit = async (FormData) => {
     try {
-      const { data } = await signup(FormData, profilePic);
-      localStorage.setItem("token", data.token);
+      await signup(FormData, profilePic);
       window.location = "/";
     } catch (err) {
       if (err.response && err.response.status === 400) {
